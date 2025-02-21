@@ -38,8 +38,8 @@ setup(
     long_description=read('README.rst'),
     download_url='http://pypi.python.org/pypi/pyboleto',
     scripts=[
-        'bin/html_pyboleto_sample.py',
-        'bin/pdf_pyboleto_sample.py'
+        os.path.join(os.path.pardir, 'bin', 'html_pyboleto_sample.py'),
+        os.path.join(os.path.pardir, 'bin', 'pdf_pyboleto_sample.py'),
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
