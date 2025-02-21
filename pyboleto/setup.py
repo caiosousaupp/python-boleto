@@ -16,11 +16,11 @@ def get_version():  # Remove the 'package' argument
     return re.search(r"^__version__ = ['\"]([^'\"]+)['\"]", init_py, re.MULTILINE).group(1)
 
 setup(
-    name='python3-boleto',
+    name='pyboleto',
     version=get_version(),
-    author='Trust-Code',
-    author_email='suporte@trustcode.com.br',
-    url='https://github.com/Trust-Code/python-boleto',
+    author='Caio Sousa',
+    author_email='caio.sousa@upp.com.br',
+    url='https://github.com/caiosousaupp/python3-boleto',
     packages=find_packages(),
     package_dir={'': '.'},
     package_data={
