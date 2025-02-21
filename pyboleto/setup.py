@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import os
 import re
 
@@ -7,13 +5,14 @@ from setuptools import setup, find_packages
 
 
 def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+    return open(os.path.join(os.path.dirname(__file__), os.path.pardir, fname)).read()
 
 
-def get_version():  # Remove the 'package' argument
+def get_version():
     """Return package version."""
     init_py = open(os.path.join(os.path.dirname(__file__), '__init__.py')).read()
     return re.search(r"^__version__ = ['\"]([^'\"]+)['\"]", init_py, re.MULTILINE).group(1)
+
 
 setup(
     name='pyboleto',
@@ -22,7 +21,6 @@ setup(
     author_email='caio.sousa@upp.com.br',
     url='https://github.com/caiosousaupp/python3-boleto',
     packages=find_packages(),
-    package_dir={'': '.'},
     package_data={
         '': ['LICENSE'],
         'pyboleto': ['media/*.jpg', 'media/*.png', 'templates/*.html'],
